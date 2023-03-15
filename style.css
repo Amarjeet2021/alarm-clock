@@ -1,0 +1,114 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+:root {
+	
+	--shine: #00ff97;
+	--shine: #130402;
+	--fit: #fff;
+	--spd: 0.25s;
+}		
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body, .wrapper, .content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body{
+  padding: 0 10px;
+  min-height: 100vh;
+  background: #07101a;
+  background-color: rgb(66, 111, 66);
+  background-image: linear-gradient();
+  background: radial-gradient(ellipse at 50% 50%,#fff 35vmin, var(--shine));
+}
+.wrapper{
+  width: 440px;
+  color: rgb(64, 3, 3);
+  padding: 30px 30px 38px;
+  background: #918f8f;
+  border-radius: 10px;
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.wrapper img{
+  max-width: 200px;
+  border-radius: 50%;
+  animation: scale 1s ease infinite;
+}
+@keyframes scale {
+  0% {
+      transform: scale(1.0);
+  }
+  50% {
+    transform: scale(1.2) translateY(0.3rem);
+    /* box-shadow: 3px 3px 10px black; */
+    border-radius: 50%;
+  }
+  100% {
+    transform: scale(1.0);
+  }
+}
+.wrapper h1{
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 0;
+}
+.wrapper .content{
+  width: 100%;
+  /* color: rgb(83, 27, 27); */
+  justify-content: space-between;
+}
+
+.content.disable{
+  cursor: no-drop;
+}
+.content .column{
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+  width: calc(100% / 3 - 5px);
+}
+.content.disable .column{
+  opacity: 0.6;
+  pointer-events: none;
+}
+.column select{
+  width: 100%;
+  height: 53px;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 19px;
+  color: #4b0903;
+}
+.wrapper button{
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 17px 0;
+  margin-top: 20px;
+  border-radius: 5px;
+  background: #091421;
+
+}
+.wrapper button:hover{
+  transition: 1s ease ;
+  box-shadow: 3px 3px 10px rgb(54, 5, 5),-3px -3px 10px rgb(32, 2, 2);
+  background-color: #4b0903;
+}
+.text {
+  position: absolute;
+  left: 12rem;
+  bottom: 11rem;
+  color:  #a1a0a0;
+  user-select: none;
+}
+
